@@ -6,12 +6,12 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-white via-rose-50 to-rose-100 overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-white via-rose-50 to-rose-100 overflow-hidden"
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="relative z-10 animate-fade-in">
+        <div className="flex flex-col items-center text-center">
+          {/* Hero Content */}
+          <div className="relative z-10 animate-fade-in max-w-3xl">
             <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-red-500 bg-red-50 rounded-full">
               Innovative Technology Solutions
             </div>
@@ -23,11 +23,11 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-lg text-gray-600 mb-8 max-w-lg">
+            <p className="text-lg text-gray-600 mb-8 mx-auto max-w-xl">
               Boswin is a technology development company with global reach, driving innovation and creating cutting-edge solutions for tomorrow's challenges.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button
                 className="bg-red-500 hover:bg-red-600 text-white gap-2"
                 size="lg"
@@ -50,8 +50,8 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right Content - Image with Modern Effects */}
-          <div className="hidden lg:block relative">
+          {/* Image with Modern Effects */}
+          <div className="relative mt-16 max-w-2xl mx-auto">
             {/* Decorative elements */}
             <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
             <div className="absolute -left-10 -top-10 w-72 h-72 bg-red-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
