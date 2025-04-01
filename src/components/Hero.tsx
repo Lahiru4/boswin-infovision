@@ -9,7 +9,7 @@ const Hero = () => {
       className="min-h-screen relative overflow-hidden"
     >
       {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-black/70 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-boswin-navy/90 via-boswin-navy/80 to-black/70 z-0"></div>
       
       {/* Background image */}
       <div className="absolute inset-0 z-[-1]">
@@ -30,7 +30,7 @@ const Hero = () => {
           
           {/* Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            The Cutting Edge of <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500">Innovation</span>
+            The Cutting Edge of <span className="text-transparent bg-clip-text bg-gradient-to-r from-boswin-blue to-boswin-teal">Innovation</span>
           </h1>
           
           {/* Description */}
@@ -42,7 +42,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
             <Button 
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 rounded-md transition-all duration-300 flex items-center gap-2 text-lg h-auto"
+              className="bg-boswin-blue hover:bg-boswin-teal text-white px-8 py-6 rounded-md transition-all duration-300 flex items-center gap-2 text-lg h-auto"
               onClick={() => document.getElementById('focus-areas')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Our Solutions
@@ -61,15 +61,15 @@ const Hero = () => {
           {/* Floating stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-16">
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <p className="text-3xl font-bold text-red-500">2006</p>
+              <p className="text-3xl font-bold text-boswin-blue">2006</p>
               <p className="text-white/70">Established</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <p className="text-3xl font-bold text-red-500">3+</p>
+              <p className="text-3xl font-bold text-boswin-teal">3+</p>
               <p className="text-white/70">Global Locations</p>
             </div>
             <div className="hidden md:block bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <p className="text-3xl font-bold text-red-500">10+</p>
+              <p className="text-3xl font-bold text-boswin-blue">10+</p>
               <p className="text-white/70">Industries Served</p>
             </div>
           </div>
