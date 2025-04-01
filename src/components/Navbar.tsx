@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -20,14 +19,12 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when switching to desktop
   useEffect(() => {
     if (!isMobile && isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
   }, [isMobile, isMobileMenuOpen]);
 
-  // Close menu when user clicks outside
   useEffect(() => {
     const handleClickOutside = () => {
       if (isMobileMenuOpen) {
@@ -39,7 +36,6 @@ const Navbar = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isMobileMenuOpen]);
 
-  // Group navigation items with dropdowns
   const navItems = [
     { 
       title: 'Home', 
@@ -48,6 +44,10 @@ const Navbar = () => {
     { 
       title: 'About', 
       href: '/about' 
+    },
+    {
+      title: 'News',
+      href: '/news'
     },
     { 
       title: 'Services', 
@@ -95,7 +95,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item, index) => (
             <div key={index} className="relative group">
@@ -154,7 +153,6 @@ const Navbar = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-boswin-navy p-2 z-50"
           onClick={handleMobileMenuToggle}
@@ -164,7 +162,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
