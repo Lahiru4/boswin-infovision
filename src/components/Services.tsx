@@ -33,7 +33,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-boswin-navy mb-4">Our Brands & Services</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-6"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mx-auto mb-6"></div>
           <p className="text-boswin-gray text-lg">
             Discover our comprehensive range of technology solutions and services designed to transform businesses across industries.
           </p>
@@ -45,21 +45,21 @@ const Services = () => {
               key={index} 
               className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
             >
-              <div className="h-2 bg-gradient-to-r from-boswin-blue to-boswin-teal"></div>
+              <div className="h-2 bg-gradient-to-r from-boswin-blue to-red-500"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-boswin-navy mb-3">{service.title}</h3>
                 <p className="text-boswin-gray mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start">
-                      <CircleCheck className="w-5 h-5 text-boswin-teal mr-2 flex-shrink-0" />
+                      <CircleCheck className="w-5 h-5 text-red-500 mr-2 flex-shrink-0" />
                       <span className="text-sm text-boswin-gray">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <a 
                   href="#contact" 
-                  className="text-boswin-blue font-medium flex items-center hover:text-boswin-navy transition-colors"
+                  className="text-red-500 font-medium flex items-center hover:text-boswin-navy transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1" />
@@ -75,7 +75,7 @@ const Services = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-boswin-blue hover:bg-boswin-navy text-white px-8 py-3 rounded-md transition-colors duration-300"
+            className="inline-block bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md transition-colors duration-300"
           >
             Request a Consultation
           </a>

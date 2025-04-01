@@ -40,14 +40,14 @@ const Navbar = () => {
             <a 
               key={index} 
               href={item.href}
-              className="text-boswin-navy hover:text-boswin-blue transition-colors font-medium"
+              className="text-boswin-navy hover:text-red-500 transition-colors font-medium"
             >
               {item.title}
             </a>
           ))}
           <a 
             href="#contact" 
-            className="bg-boswin-blue text-white px-5 py-2 rounded-md hover:bg-boswin-teal transition-colors"
+            className="bg-red-500 text-white px-5 py-2 rounded-md hover:bg-red-600 transition-colors"
           >
             Contact Us
           </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
               <a 
                 key={index} 
                 href={item.href}
-                className="text-boswin-navy hover:text-boswin-blue transition-colors py-2 font-medium"
+                className="text-boswin-navy hover:text-red-500 transition-colors py-2 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.title}
@@ -79,7 +79,7 @@ const Navbar = () => {
             ))}
             <a 
               href="#contact" 
-              className="bg-boswin-blue text-white px-5 py-2 rounded-md hover:bg-boswin-teal transition-colors text-center"
+              className="bg-red-500 text-white px-5 py-2 rounded-md hover:bg-red-600 transition-colors text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us

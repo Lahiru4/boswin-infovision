@@ -17,7 +17,7 @@ const GlobalReach = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-boswin-navy mb-4">Our Global Reach</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-6"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mx-auto mb-6"></div>
           <p className="text-boswin-gray text-lg">
             With its current bases established in Sri Lanka, China, and Hong Kong, Boswin is expanding to newer demographics, opportunities, and challenges.
           </p>
@@ -51,7 +51,7 @@ const GlobalReach = () => {
                 >
                   <div className={`
                     w-4 h-4 rounded-full animate-pulse
-                    ${location.status === 'Established' ? 'bg-boswin-blue' : 
+                    ${location.status === 'Established' ? 'bg-red-500' : 
                       location.status === 'Expanding' ? 'bg-boswin-teal' : 'bg-boswin-gray'}
                   `}></div>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white rounded-md shadow-lg p-2 hidden group-hover:block z-10 min-w-[100px] text-center">
@@ -66,7 +66,7 @@ const GlobalReach = () => {
           {/* Legend */}
           <div className="flex justify-center mt-6 gap-8">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-boswin-blue"></div>
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <span className="text-sm text-boswin-gray">Established</span>
             </div>
             <div className="flex items-center gap-2">
@@ -80,7 +80,7 @@ const GlobalReach = () => {
           </div>
         </div>
 
-        <div className="mt-12 bg-gradient-to-r from-boswin-blue to-boswin-teal rounded-lg p-8 text-white">
+        <div className="mt-12 bg-gradient-to-r from-boswin-blue to-red-500 rounded-lg p-8 text-white">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center mb-6 md:mb-0">
               <Globe className="w-12 h-12 mr-4" />
@@ -91,7 +91,7 @@ const GlobalReach = () => {
             </div>
             <a 
               href="#contact" 
-              className="px-6 py-3 bg-white text-boswin-blue font-semibold rounded-md hover:bg-gray-100 transition-colors"
+              className="px-6 py-3 bg-white text-red-500 font-semibold rounded-md hover:bg-gray-100 transition-colors"
             >
               Partner With Us
             </a>

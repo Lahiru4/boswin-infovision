@@ -15,16 +15,16 @@ const Footer = () => {
               A fast-paced limited liability conglomerate at the cutting edge of innovation, making technological difference in the world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-boswin-blue transition-colors">
+              <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-boswin-blue transition-colors">
+              <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-boswin-blue transition-colors">
+              <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-boswin-blue transition-colors">
+              <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
@@ -34,12 +34,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#focus-areas" className="text-gray-300 hover:text-white transition-colors">Focus Areas</a></li>
-              <li><a href="#global-reach" className="text-gray-300 hover:text-white transition-colors">Global Reach</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-red-400 transition-colors">Home</a></li>
+              <li><a href="#focus-areas" className="text-gray-300 hover:text-red-400 transition-colors">Focus Areas</a></li>
+              <li><a href="#global-reach" className="text-gray-300 hover:text-red-400 transition-colors">Global Reach</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-red-400 transition-colors">Services</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-red-400 transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-red-400 transition-colors">Careers</a></li>
             </ul>
           </div>
           
@@ -48,15 +48,15 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <Mail className="w-5 h-5 mr-3 text-boswin-blue mt-0.5" />
+                <Mail className="w-5 h-5 mr-3 text-red-400 mt-0.5" />
                 <span className="text-gray-300">info@boswin.com</span>
               </li>
               <li className="flex items-start">
-                <Phone className="w-5 h-5 mr-3 text-boswin-blue mt-0.5" />
+                <Phone className="w-5 h-5 mr-3 text-red-400 mt-0.5" />
                 <span className="text-gray-300">+94 11 123 4567</span>
               </li>
               <li className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-boswin-blue mt-0.5" />
+                <MapPin className="w-5 h-5 mr-3 text-red-400 mt-0.5" />
                 <span className="text-gray-300">123 Innovation Drive, Colombo, Sri Lanka</span>
               </li>
             </ul>
@@ -70,11 +70,11 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-boswin-blue"
+                className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-red-400"
               />
               <button 
                 type="submit" 
-                className="w-full bg-boswin-blue hover:bg-boswin-teal text-white px-4 py-2 rounded-md transition-colors"
+                className="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors"
               >
                 Subscribe
               </button>
