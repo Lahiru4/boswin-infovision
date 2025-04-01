@@ -27,8 +27,18 @@ const GlobalReach = () => {
   };
 
   return (
-    <section id="global-reach" className="py-20 overflow-hidden bg-gradient-to-br from-white to-slate-50">
-      <div className="container mx-auto px-4">
+    <section id="global-reach" className="py-20 overflow-hidden relative">
+      {/* Background Map Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-10 z-0"
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1589519160732-57fc498494f8?q=80&w=1920&auto=format')", 
+          backgroundBlendMode: "overlay" 
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white/90 z-0"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="max-w-3xl mx-auto text-center mb-16"
           initial="hidden"
@@ -54,32 +64,20 @@ const GlobalReach = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+          <div className="bg-gradient-to-br from-slate-50 to-white/80 rounded-2xl overflow-hidden shadow-lg border border-slate-100 backdrop-blur-sm">
             <div className="aspect-[2/1] w-full relative">
-              {/* World Map */}
-              <svg className="w-full h-full" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Continents as blobs */}
-                <motion.path
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                  d="M150,200 Q250,150 350,200 T550,200 T750,180 Q850,150 900,200"
-                  stroke="#E2E8F0"
-                  strokeWidth="70"
-                  fill="#F8FAFC"
-                />
-                <motion.path
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-                  d="M100,300 Q200,250 300,300 T500,300 T700,320 Q800,350 900,300"
-                  stroke="#EFF6FF"
-                  strokeWidth="80"
-                  fill="#F1F5F9"
-                />
-                
+              {/* World Map Background */}
+              <div 
+                className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
+                style={{ 
+                  backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format')", 
+                  backgroundSize: "cover"
+                }}
+              />
+              <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px] z-0"></div>
+              
+              {/* Map overlay grid */}
+              <svg className="w-full h-full absolute z-10" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Grid lines */}
                 <motion.g
                   initial={{ opacity: 0 }}
@@ -121,7 +119,7 @@ const GlobalReach = () => {
                 return (
                   <motion.div 
                     key={index} 
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
+                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group z-20"
                     style={{ left: `${position.x}%`, top: `${position.y}%` }}
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -147,7 +145,7 @@ const GlobalReach = () => {
                       <div className="
                         absolute top-full left-1/2 transform -translate-x-1/2 mt-2 
                         opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                        bg-white rounded-lg shadow-lg p-3 z-10 min-w-[120px] text-center
+                        bg-white rounded-lg shadow-lg p-3 z-30 min-w-[120px] text-center
                         backdrop-blur-sm border border-slate-100
                       ">
                         <p className="text-sm font-semibold text-boswin-navy">{location.name}</p>
