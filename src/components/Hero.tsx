@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white via-blue-50 to-rose-50"
+      className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white via-rose-50 to-rose-100"
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -30,7 +30,7 @@ const Hero = () => {
               </a>
               <a 
                 href="#contact"
-                className="border-2 border-boswin-blue text-boswin-blue hover:bg-boswin-blue hover:text-white px-6 py-3 rounded-md transition-colors duration-300"
+                className="border-2 border-red-400 text-red-500 hover:bg-red-50 hover:border-red-500 hover:text-red-600 px-6 py-3 rounded-md transition-colors duration-300"
               >
                 Get in Touch
               </a>
@@ -38,7 +38,7 @@ const Hero = () => {
           </div>
           <div className="hidden md:block animate-fade-in">
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-boswin-blue to-red-500 rounded-lg blur opacity-30"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-300 to-red-500 rounded-lg blur opacity-30"></div>
               <img 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
                 alt="Technology innovation" 
