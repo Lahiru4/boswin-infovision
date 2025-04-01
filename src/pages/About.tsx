@@ -74,15 +74,15 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-white via-red-50 to-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-white via-blue-50 to-teal-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-white via-red-50 to-red-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-boswin-navy mb-6">About Boswin</h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-6"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-6"></div>
             <p className="text-xl text-boswin-gray mb-6">
               Boswin Group (Pvt) Ltd
             </p>
@@ -94,7 +94,7 @@ const About = () => {
       </section>
       
       {/* Company Introduction */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white bg-opacity-90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-boswin-navy mb-8 text-center">COMPANY INTRODUCTION</h2>
@@ -111,7 +111,7 @@ const About = () => {
       </section>
       
       {/* Vision & Mission */}
-      <section className="py-16 bg-gradient-to-r from-boswin-blue to-boswin-teal text-white">
+      <section className="py-16 bg-gradient-to-r from-red-500 to-boswin-teal text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-center p-8 border border-white/20 rounded-lg backdrop-blur-sm">
@@ -131,31 +131,31 @@ const About = () => {
       </section>
       
       {/* Journey Timeline */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-red-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-boswin-navy mb-4 text-center">The Journey of Boswin</h2>
-            <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-8"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-8"></div>
             <p className="text-lg text-boswin-gray text-center mb-12">
               In the annals of Boswin's remarkable journey, every moment is a testament to our relentless pursuit of innovation, global expansion, and unwavering commitment.
             </p>
             
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-boswin-blue to-boswin-teal"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-red-300 to-red-500"></div>
               
               {/* Timeline Items */}
               <div className="space-y-16">
                 {milestones.map((milestone, index) => (
                   <div key={index} className={`flex items-start ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
-                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
-                        <h3 className="text-xl font-bold text-boswin-blue mb-2">{milestone.year}</h3>
+                      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all hover:border-l-2 hover:border-red-300">
+                        <h3 className="text-xl font-bold text-red-500 mb-2">{milestone.year}</h3>
                         <p className="text-boswin-gray">{milestone.description}</p>
                       </div>
                     </div>
                     <div className="absolute left-1/2 transform -translate-x-1/2 mt-4">
-                      <div className="w-6 h-6 rounded-full bg-white border-4 border-boswin-blue"></div>
+                      <div className="w-6 h-6 rounded-full bg-white border-4 border-red-400"></div>
                     </div>
                     <div className="w-1/2"></div>
                   </div>
@@ -167,20 +167,20 @@ const About = () => {
       </section>
       
       {/* Services & Brands */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white bg-opacity-90">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-boswin-navy mb-4 text-center">Services & Brands</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-12"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                <div className="h-2 bg-gradient-to-r from-boswin-blue to-boswin-teal"></div>
+              <div key={index} className="bg-red-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div className="h-2 bg-gradient-to-r from-red-300 to-red-500"></div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-boswin-navy mb-2 group-hover:text-boswin-blue transition-colors">{service.title}</h3>
-                  <p className="text-boswin-teal font-medium mb-3">{service.description}</p>
+                  <h3 className="text-xl font-bold text-boswin-navy mb-2 group-hover:text-red-500 transition-colors">{service.title}</h3>
+                  <p className="text-red-500 font-medium mb-3">{service.description}</p>
                   <p className="text-boswin-gray">{service.details}</p>
-                  <a href="#" className="inline-flex items-center text-boswin-blue mt-4 font-medium hover:text-boswin-navy transition-colors">
+                  <a href="#" className="inline-flex items-center text-red-500 mt-4 font-medium hover:text-boswin-navy transition-colors">
                     Learn More <ArrowRight size={16} className="ml-1" />
                   </a>
                 </div>
@@ -191,48 +191,48 @@ const About = () => {
       </section>
       
       {/* Contact Information */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-red-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-boswin-navy mb-4 text-center">Contact Us</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-boswin-teal mx-auto mb-12"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* China Office */}
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all border-l-4 border-red-300">
               <h3 className="text-2xl font-bold text-boswin-navy mb-4">Head Office</h3>
-              <h4 className="text-lg font-semibold text-boswin-blue mb-4">Zhejiang Boswin Technology Co. Ltd</h4>
+              <h4 className="text-lg font-semibold text-red-500 mb-4">Zhejiang Boswin Technology Co. Ltd</h4>
               
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Building className="w-5 h-5 text-boswin-teal mt-1 mr-3" />
+                  <Building className="w-5 h-5 text-red-500 mt-1 mr-3" />
                   <p className="text-boswin-gray">
                     Zhonghao International Business Center, No. 672, Xintang Road, Jianggan District, Hangzhou, Zhejiang, China
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-boswin-teal mr-3" />
+                  <Phone className="w-5 h-5 text-red-500 mr-3" />
                   <p className="text-boswin-gray">+8618626859893</p>
                 </div>
               </div>
             </div>
             
             {/* Sri Lanka Office */}
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all border-l-4 border-red-300">
               <h3 className="text-2xl font-bold text-boswin-navy mb-4">Sri Lanka Office</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Building className="w-5 h-5 text-boswin-teal mt-1 mr-3" />
+                  <Building className="w-5 h-5 text-red-500 mt-1 mr-3" />
                   <p className="text-boswin-gray">
                     12, Second Lane, Beddagana Road, Pita Kotte, Sri Lanka
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 text-boswin-teal mr-3" />
+                  <Clock className="w-5 h-5 text-red-500 mr-3" />
                   <p className="text-boswin-gray">Mon-Sat: 08:00 - 18:00</p>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-boswin-teal mr-3" />
+                  <Phone className="w-5 h-5 text-red-500 mr-3" />
                   <p className="text-boswin-gray">+94 76 300 6555</p>
                 </div>
               </div>
@@ -242,7 +242,7 @@ const About = () => {
           <div className="mt-12 text-center">
             <a 
               href="#contact" 
-              className="inline-block bg-boswin-blue hover:bg-boswin-navy text-white px-8 py-3 rounded-md transition-colors duration-300"
+              className="inline-block bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md transition-colors duration-300"
             >
               Get in Touch
             </a>
