@@ -17,10 +17,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { title: 'Home', href: '#home' },
-    { title: 'Focus Areas', href: '#focus-areas' },
-    { title: 'Global Reach', href: '#global-reach' },
-    { title: 'Services', href: '#services' }
+    { title: 'Home', href: '/' },
+    { title: 'About', href: '/about' },
+    { title: 'Focus Areas', href: '/#focus-areas' },
+    { title: 'Global Reach', href: '/#global-reach' },
+    { title: 'Services', href: '/#services' }
   ];
 
   return (
@@ -29,7 +30,7 @@ const Navbar = () => {
       isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-boswin-navy">
+        <a href="/" className="text-2xl font-bold text-boswin-navy">
           BOSWIN
         </a>
 
