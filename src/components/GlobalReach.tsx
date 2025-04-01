@@ -30,7 +30,7 @@ const GlobalReach = () => {
     <section id="global-reach" className="py-20 overflow-hidden relative">
       {/* Background Map Image */}
       <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-10 z-0"
+        className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{ 
           backgroundImage: "url('https://images.unsplash.com/photo-1589519160732-57fc498494f8?q=80&w=1920&auto=format')", 
           backgroundBlendMode: "overlay" 
@@ -74,7 +74,7 @@ const GlobalReach = () => {
                   backgroundSize: "cover"
                 }}
               />
-              <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px] z-0"></div>
+              <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
               
               {/* Map overlay grid */}
               <svg className="w-full h-full absolute z-10" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
