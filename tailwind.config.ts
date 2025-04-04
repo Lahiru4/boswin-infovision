@@ -67,9 +67,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				boswin: {
-					blue: '#0EA5E9',
-					teal: '#0D9488',
-					navy: '#1E3A8A',
+					blue: 'black',
+					teal: 'black',
+					navy: 'black',
 					gray: '#64748B',
 					light: '#F1F5F9'
 				}
@@ -105,5 +105,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require('tailwindcss-text-stroke'),require("tailwindcss-animate")],
 } satisfies Config;

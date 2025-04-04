@@ -43,7 +43,7 @@ const Navbar = () => {
     },
     { 
       title: 'About', 
-      href: '/about' 
+      href: '/#about' 
     },
     {
       title: 'News',
@@ -88,10 +88,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="relative z-10 text-2xl font-bold text-boswin-navy">
           <span className="group inline-flex items-center">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy via-red-500 to-red-400 group-hover:from-red-500 group-hover:to-boswin-navy transition-all duration-300">
-              BOSWIN
-            </span>
-            <div className="w-2 h-2 bg-red-500 rounded-full ml-1 animate-pulse"></div>
+            <img src="https://cdn.bitrix24.com/b15879507/landing/690/6908c14563aa1bbdc9fac128ceb31a60/WeChat_Image_20230111114442_1x.png" alt="logo" width={100}/>
           </span>
         </a>
 

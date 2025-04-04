@@ -81,7 +81,7 @@ const About = () => {
       <section className="pt-32 pb-16 bg-gradient-to-br from-white via-red-50 to-red-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-boswin-navy mb-6">About Boswin</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy to-red-500"> About Boswin</h1>
             <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-6"></div>
             <p className="text-xl text-boswin-gray mb-6">
               Boswin Group (Pvt) Ltd
@@ -175,7 +175,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {services.map((service, index) => (
               <div key={index} className="bg-red-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                <div className="h-2 bg-gradient-to-r from-red-300 to-red-500"></div>
+                <div className="h-2 bg-gradient-to-r from-red-300 to-black"></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-boswin-navy mb-2 group-hover:text-red-500 transition-colors">{service.title}</h3>
                   <p className="text-red-500 font-medium mb-3">{service.description}</p>
