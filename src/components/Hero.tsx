@@ -10,6 +10,11 @@ const Hero = () => {
     "https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2FKdona.png?alt=media&token=9776ee89-8c6f-4e3a-8c4e-c0c12f4a44d6",
     "https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2Fsripay.png?alt=media&token=519e6fb7-c975-4671-8456-a50aaa6587b1",
   ];
+  const sliderLable =[
+    "MI Store",
+    "Kdona",
+    "SRI Pay",
+  ]
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -83,18 +88,17 @@ const Hero = () => {
                       <div>
                         <div className="absolute inset-0"></div>
                       </div>
-
                       <img
                         src={img}
                         alt={`Slide ${index + 1}`}
-                        className="w-full h-[600px] md-h-[400px]object-cover"
+                        className="w-full h-[400px]  sm:h-[600px]"
                       />
                     </div>
                   ))}
                 </div>
 
                 {/* Navigation arrows */}
-                <button
+                {/* <button
                   onClick={goToPrevSlide}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white focus:outline-none transition-colors"
                 >
@@ -105,9 +109,14 @@ const Hero = () => {
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white focus:outline-none transition-colors"
                 >
                   <ChevronRight className="w-5 h-5 text-slate-700" />
-                </button>
+                </button> */}
 
                 {/* Slide indicators */}
+                <div className="absolute top-[50%] left-1/2">
+                  {sliderLable.map((img, index) => (
+                    <h2>{img}</h2>
+                  ))}
+                </div>
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                   {sliderImages.map((_, index) => (
                     <button

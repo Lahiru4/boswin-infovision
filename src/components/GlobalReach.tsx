@@ -429,7 +429,7 @@ const GlobalReach = () => {
             Our Global Reach
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mx-auto mb-6"></div>
-          <p className="text-boswin-gray text-lg">
+          <p className="text-boswin-gray text-3xl">
             With established bases in <span className="font-semibold text-boswin-navy">Sri Lanka, China, and Hong Kong</span>, 
             Boswin is strategically expanding to new markets and opportunities worldwide.
           </p>

@@ -95,7 +95,7 @@ const FocusAreas = () => {
         </div>
         
         {/* Accent lines with darker red */}
-        <div className="absolute top-1/3 right-0 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30"></div>
+        <div className="absolute top-[37%] right-0 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30"></div>
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-red-500 via-transparent to-red-500 opacity-20"></div>
         <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-boswin-blue to-transparent opacity-30"></div>
       </div>
@@ -108,7 +108,7 @@ const FocusAreas = () => {
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mb-6"></div>
           </div>
-          <p className="text-boswin-gray text-lg">
+          <p className="text-boswin-gray text-3xl">
             Boswin constantly seeks to be the cutting edge of innovation,
             venturing into novel findings and exploring how we can make a
             technological difference in the world.
