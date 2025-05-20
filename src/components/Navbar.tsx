@@ -3,6 +3,9 @@ import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion, AnimatePresence } from "framer-motion";
+import { PhoneOutlined } from '@ant-design/icons';
+import ContactUs from './ContactUs';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +17,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,26 +34,26 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
       }
     };
-    
+
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isMobileMenuOpen]);
 
   const navItems = [
-    { 
-      title: 'Home', 
-      href: '/' 
+    {
+      title: 'Home',
+      href: '/'
     },
-    { 
-      title: 'About', 
-      href: '/#about' 
+    {
+      title: 'About',
+      href: '/#about'
     },
     {
       title: 'News',
       href: '/news'
     },
-    { 
-      title: 'Services', 
+    {
+      title: 'Services',
       href: '/#services',
       dropdown: [
         { title: 'Technology Development', href: '/#services-technology' },
@@ -58,13 +61,13 @@ const Navbar = () => {
         { title: 'Consulting', href: '/#services-consulting' }
       ]
     },
-    { 
-      title: 'Focus Areas', 
-      href: '/#focus-areas' 
+    {
+      title: 'Focus Areas',
+      href: '/#focus-areas'
     },
-    { 
-      title: 'Global Reach', 
-      href: '/#global-reach' 
+    {
+      title: 'Global Reach',
+      href: '/#global-reach'
     },
   ];
 
@@ -81,14 +84,14 @@ const Navbar = () => {
   return (
     <header className={cn(
       "fixed w-full z-50 transition-all duration-300",
-      isScrolled 
-        ? "bg-white/90 backdrop-blur-md shadow-md py-2" 
+      isScrolled
+        ? "bg-white/90 backdrop-blur-md shadow-md py-2"
         : "bg-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="relative z-10 text-2xl font-bold text-boswin-navy">
           <span className="group inline-flex items-center">
-            <img src="https://cdn.bitrix24.com/b15879507/landing/690/6908c14563aa1bbdc9fac128ceb31a60/WeChat_Image_20230111114442_1x.png" alt="logo" width={100}/>
+            <img src="https://cdn.bitrix24.com/b15879507/landing/690/6908c14563aa1bbdc9fac128ceb31a60/WeChat_Image_20230111114442_1x.png" alt="logo" width={100} />
           </span>
         </a>
 
@@ -97,21 +100,21 @@ const Navbar = () => {
             <div key={index} className="relative group">
               {item.dropdown ? (
                 <>
-                  <button 
+                  <button
                     className="text-boswin-navy hover:text-red-500 transition-colors font-medium px-4 py-2 rounded-md hover:bg-gray-100/50 flex items-center"
                     onClick={(e) => handleDropdown(item.title, e)}
                   >
                     {item.title}
-                    <ChevronDown 
+                    <ChevronDown
                       className={cn(
                         "ml-1 h-4 w-4 transition-transform duration-200",
                         activeDropdown === item.title ? "rotate-180" : ""
-                      )} 
+                      )}
                     />
                   </button>
                   <AnimatePresence>
                     {activeDropdown === item.title && (
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: -5 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -5 }}
@@ -119,8 +122,8 @@ const Navbar = () => {
                         className="absolute top-full left-0 w-48 bg-white/95 backdrop-blur-sm shadow-lg rounded-md py-1 mt-1 z-50"
                       >
                         {item.dropdown.map((subItem, subIndex) => (
-                          <a 
-                            key={subIndex} 
+                          <a
+                            key={subIndex}
                             href={subItem.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-500"
                           >
@@ -132,8 +135,8 @@ const Navbar = () => {
                   </AnimatePresence>
                 </>
               ) : (
-                <a 
-                  key={index} 
+                <a
+                  key={index}
                   href={item.href}
                   className="text-boswin-navy hover:text-red-500 transition-colors font-medium px-4 py-2 rounded-md hover:bg-gray-100/50"
                 >
@@ -142,15 +145,26 @@ const Navbar = () => {
               )}
             </div>
           ))}
-          <a 
+          {/* <a 
             href="#contact" 
             className="bg-red-500 text-white ml-2 px-5 py-2 rounded-md hover:bg-red-600 transition-colors shadow-sm hover:shadow-md"
           >
             Contact Us
+          </a> */}
+          {/* <PhoneOutlined /> */}
+          <a
+            href="#contact"
+            className="ml-4 flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow-md transition-colors"
+          >
+            <PhoneOutlined style={{ fontSize: '20px' }} />
+            <span className="hidden lg:inline font-medium">Contact Us</span>
           </a>
+
+
+
         </nav>
 
-        <button 
+        <button
           className="md:hidden text-boswin-navy p-2 z-50"
           onClick={handleMobileMenuToggle}
           aria-label="Toggle menu"
@@ -169,7 +183,7 @@ const Navbar = () => {
             className="md:hidden bg-white/95 backdrop-blur-md absolute top-full left-0 w-full shadow-md z-40"
             onClick={(e) => e.stopPropagation()}
           >
-            <motion.div 
+            <motion.div
               className="container mx-auto px-4 py-4 flex flex-col space-y-1"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -184,11 +198,11 @@ const Navbar = () => {
                         onClick={(e) => handleDropdown(item.title, e)}
                       >
                         <span className="font-medium">{item.title}</span>
-                        <ChevronDown 
+                        <ChevronDown
                           className={cn(
                             "ml-1 h-4 w-4 transition-transform duration-200",
                             activeDropdown === item.title ? "rotate-180" : ""
-                          )} 
+                          )}
                         />
                       </button>
                       <AnimatePresence>
@@ -217,7 +231,7 @@ const Navbar = () => {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <a 
+                    <a
                       href={item.href}
                       className="block w-full text-boswin-navy hover:bg-gray-50 hover:text-red-500 transition-colors py-3 px-2 rounded-md font-medium"
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -228,8 +242,8 @@ const Navbar = () => {
                 </div>
               ))}
               <div className="pt-2">
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="block w-full bg-red-500 text-center text-white px-5 py-3 rounded-md hover:bg-red-600 transition-colors shadow-sm font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

@@ -205,7 +205,7 @@ const About = () => {
           if (
             autoScrollDirection > 0 &&
             timelineRef.current.scrollLeft >=
-              timelineRef.current.scrollWidth - timelineRef.current.clientWidth
+            timelineRef.current.scrollWidth - timelineRef.current.clientWidth
           ) {
             setAutoScrollDirection(-1);
           } else if (
@@ -243,10 +243,12 @@ const About = () => {
     <section id="about" className=" bg-white">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <div className="text-right">
-          <h2 className="text-5xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy to-red-500">
+          <h1 className="text-5xl md:text-8xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy to-red-500 text-center">
             About Boswin
-          </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mb-6 ml-auto"></div>
+          </h1>
+
+          <div className="h-1 w-24 bg-gradient-to-r from-boswin-blue to-red-500 mb-6 mx-auto"></div>
+
         </div>
         <p className="text-boswin-gray text-3xl">
           Boswin Group (Pvt) Ltd, Established Since 2006
@@ -257,7 +259,7 @@ const About = () => {
       <section className="py-16 bg-white bg-opacity-90">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2
+            {/* <h2
               className="text-7xl font-bold mb-8 text-center text-white"
               style={{
                 textShadow:
@@ -266,8 +268,14 @@ const About = () => {
               }}
             >
               COMPANY INTRODUCTION
+            </h2> */}
+            <h2
+              className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-8 text-center bg-gradient-to-r from-boswin-navy to-red-500 text-transparent bg-clip-text"
+            >
+              COMPANY INTRODUCTION
             </h2>
-            <div className="prose prose-lg mx-auto text-boswin-gray text-3xl text-center">
+
+            <div className="prose prose-lg mx-auto text-boswin-gray text-1xl text-center">
               <p className="mb-6">
                 Boswin is an innovative technology development company, where
                 the Boswin Group is a fast-paced limited liability conglomerate
@@ -297,18 +305,14 @@ const About = () => {
             <div className="text-center p-8 rounded-lg backdrop-blur-sm">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white relative text-left">
                 <span
-                  className="absolute inset-0 text-white opacity-50 text-8xl"
-                  style={{
-                    WebkitTextStroke: "3px #000", // black stroke
-                    textShadow:
-                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", // black shadow
-                  }}
+                  className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-8 text-center"
+
                 >
-                  Vision
+
                 </span>
-                <span className="relative text-8xl">Vision</span>
+                <span className="relative text-6xl">Vision</span>
               </h2>
-              <p className="text-3xl text-left">
+              <p className="text-2xl text-left">
                 To become the leading global company based in Sri Lanka,
                 bringing the world together under one roof.
               </p>
@@ -317,17 +321,13 @@ const About = () => {
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white relative text-right">
                 <span
                   className="absolute inset-0 text-white opacity-50 text-8xl"
-                  style={{
-                    WebkitTextStroke: "3px #000", // black stroke
-                    textShadow:
-                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", // black shadow
-                  }}
+
                 >
-                  Mission
+
                 </span>
-                <span className="relative text-8xl">Mission</span>
+                <span className="relative text-6xl">Mission</span>
               </h2>
-              <p className="text-3xl text-right">
+              <p className="text-2xl text-right">
                 To achieve innovative excellence and completely modernize the
                 digital lifestyle of people around the world.
               </p>
@@ -341,17 +341,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2
-              className="text-7xl font-bold mb-8 text-center text-white"
-              style={{
-                textShadow:
-                  "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
-                color: "white",
-              }}
+              className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-8 text-center bg-gradient-to-r from-boswin-navy to-red-500 text-transparent bg-clip-text"
+
             >
               THE JOURNEY OF BOSWIN
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-red-300 to-red-500 mx-auto mb-8"></div>
-            <p className="text-3xl text-boswin-gray text-center mb-12">
+            <p className="text-2xl text-boswin-gray text-center mb-12">
               In the annals of Boswin's remarkable journey, every moment is a
               testament to our relentless pursuit of innovation, global
               expansion, and unwavering commitment.
@@ -362,11 +358,10 @@ const About = () => {
               <button
                 onClick={scrollPrev}
                 disabled={activeIndex === 0}
-                className={`p-2 rounded-full bg-red-500 text-white ${
-                  activeIndex === 0
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-red-600"
-                }`}
+                className={`p-2 rounded-full bg-red-500 text-white ${activeIndex === 0
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-red-600"
+                  }`}
               >
                 <ChevronLeft size={24} />
               </button>
@@ -383,11 +378,10 @@ const About = () => {
               <button
                 onClick={scrollNext}
                 disabled={activeIndex === milestones.length - 1}
-                className={`p-2 rounded-full bg-red-500 text-white ${
-                  activeIndex === milestones.length - 1
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-red-600"
-                }`}
+                className={`p-2 rounded-full bg-red-500 text-white ${activeIndex === milestones.length - 1
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-red-600"
+                  }`}
               >
                 <ChevronRight size={24} />
               </button>
@@ -430,19 +424,17 @@ const About = () => {
                           {milestones.map((_, i) => (
                             <div
                               key={i}
-                              className={`w-8 h-8 rounded-full flex items-center justify-center z-10 transition-all duration-300 ${
-                                i === index
-                                  ? "bg-red-500 scale-125"
-                                  : i < index
+                              className={`w-8 h-8 rounded-full flex items-center justify-center z-10 transition-all duration-300 ${i === index
+                                ? "bg-red-500 scale-125"
+                                : i < index
                                   ? "bg-red-400"
                                   : "bg-gray-200"
-                              }`}
+                                }`}
                               onClick={() => setActiveIndex(i)}
                             >
                               <div
-                                className={`w-3 h-3 rounded-full ${
-                                  i === index ? "bg-white" : "bg-transparent"
-                                }`}
+                                className={`w-3 h-3 rounded-full ${i === index ? "bg-white" : "bg-transparent"
+                                  }`}
                               ></div>
                             </div>
                           ))}

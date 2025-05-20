@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import particleSVG from '../assets/particles.svg'; 
+import particleSVG from '../assets/particles.svg';
 
 export default function Background3D() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,17 +29,17 @@ export default function Background3D() {
 
     // Load SVG texture
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load(particleSVG); 
+    const texture = textureLoader.load(particleSVG);
     // Create material
     const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.15,
-        map: texture, 
-        // transparent: false,
-        alphaTest: 0.6, 
-        opacity: 1,
-        // blending: THREE.AdditiveBlending,
-      });
-      
+      size: 0.15,
+      map: texture,
+      // transparent: false,
+      alphaTest: 0.6,
+      opacity: 1,
+      // blending: THREE.AdditiveBlending,
+    });
+
 
     // Create mesh
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);

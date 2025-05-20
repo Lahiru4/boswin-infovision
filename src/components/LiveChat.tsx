@@ -149,11 +149,10 @@ const LiveChat = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-24 right-6 z-50 w-full max-w-[calc(100vw-48px)] sm:max-w-[360px] bg-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 transform ${
-          isOpen
+        className={`fixed bottom-24 right-6 z-50 w-full max-w-[calc(100vw-48px)] sm:max-w-[360px] bg-white rounded-2xl shadow-2xl flex flex-col transition-all duration-300 transform ${isOpen
             ? "scale-100 opacity-100"
             : "scale-95 opacity-0 pointer-events-none"
-        } overflow-hidden`}
+          } overflow-hidden`}
         style={{ maxHeight: "calc(100vh - 120px)" }}
       >
         {/* Chat Header */}
@@ -188,24 +187,21 @@ const LiveChat = () => {
           {messages.map((message) => (
             <div
               key={message.id}
-              className={`mb-4 flex ${
-                message.sender === "user" ? "justify-end" : "justify-start"
-              }`}
+              className={`mb-4 flex ${message.sender === "user" ? "justify-end" : "justify-start"
+                }`}
             >
               <div
-                className={`rounded-lg sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 max-w-[85%] ${
-                  message.sender === "user"
+                className={`rounded-lg sm:rounded-2xl px-3 sm:px-4 py-2 sm:py-3 max-w-[85%] ${message.sender === "user"
                     ? "bg-red-500 text-white rounded-tr-none"
                     : "bg-white shadow-md rounded-tl-none"
-                }`}
+                  }`}
               >
                 <p className="text-sm">{message.text}</p>
                 <p
-                  className={`text-xs mt-1 ${
-                    message.sender === "user"
+                  className={`text-xs mt-1 ${message.sender === "user"
                       ? "text-white/70"
                       : "text-gray-500"
-                  }`}
+                    }`}
                 >
                   {formatTime(message.time)}
                 </p>
@@ -282,11 +278,10 @@ const LiveChat = () => {
               <button
                 onClick={handleSendMessage}
                 disabled={inputValue.trim() === ""}
-                className={`ml-1 p-1.5 rounded-full focus:outline-none ${
-                  inputValue.trim() === ""
+                className={`ml-1 p-1.5 rounded-full focus:outline-none ${inputValue.trim() === ""
                     ? "text-gray-400 bg-gray-200 cursor-not-allowed"
                     : "text-white bg-red-500 hover:bg-red-600"
-                }`}
+                  }`}
               >
                 <Send className="w-4 h-4" />
               </button>
