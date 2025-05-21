@@ -1,14 +1,65 @@
-import { CircleCheck, ArrowRight } from "lucide-react";
+import { CircleCheck, ArrowRight, Images } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import alipay from "../images/alipay2.png"
+import beeze from "../images/Beez.png"
+import citymall from "../images/citymall.png"
+import falcora from "../images/falcora.png"
+import kdona from "../images/Kdona.png"
+import sripay from "../images/Sripay.png"
+import tea from "../images/tea2.png"
+import V from "../images/V2.png"
+import wechat from "../images/Wechat.png"
+import xiomi from "../images/Xiomi.png"
+import fintech from "../images/fintech.png"
+import degitalTechnology from "../images/degitalInformation.png"
+import technology from "../images/technologyDevelopment.png"
+import businessSolution from "../images/businessSolution.png"
+import BrandSection from "./brand";
+
+
+// const services = [
+//   {
+//     title: "Technology Development",
+//     description: "Custom software solutions for diverse industries",
+//     features: ["Web Applications", "Mobile Solutions", "Enterprise Software"],
+//     image:
+//       "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheenterpriseworld.com%2Fthe-evolution-of-technology-development%2F&psig=AOvVaw1luhtFc2CkwHgUCIGiisyK&ust=1747810350837000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOC18JO7sY0DFQAAAAAdAAAAABAE",
+//   },
+//   {
+//     title: "Digital Transformation",
+//     description: "Helping businesses evolve in the digital landscape",
+//     features: [
+//       "Business Process Automation",
+//       "Cloud Migration",
+//       "Digital Strategy",
+//     ],
+//   },
+//   {
+//     title: "FinTech Solutions",
+//     description: "Innovative financial technology applications",
+//     features: [
+//       "Payment Gateways",
+//       "Digital Banking",
+//       "Blockchain Applications",
+//     ],
+//   },
+//   {
+//     title: "Business Solutions",
+//     description: "End-to-end business management systems",
+//     features: ["ERP Systems", "CRM Solutions", "Supply Chain Management"],
+//   },
+// ];
+
+
+
 
 const services = [
   {
     title: "Technology Development",
     description: "Custom software solutions for diverse industries",
     features: ["Web Applications", "Mobile Solutions", "Enterprise Software"],
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2FDigital%20Transformation.jpg?alt=media&token=adaf11fc-7bca-41a7-8291-bcc4f0430502",
+    image: technology,
   },
   {
     title: "Digital Transformation",
@@ -18,6 +69,7 @@ const services = [
       "Cloud Migration",
       "Digital Strategy",
     ],
+    image: degitalTechnology,
   },
   {
     title: "FinTech Solutions",
@@ -27,13 +79,16 @@ const services = [
       "Digital Banking",
       "Blockchain Applications",
     ],
+    image: fintech,
   },
   {
     title: "Business Solutions",
     description: "End-to-end business management systems",
     features: ["ERP Systems", "CRM Solutions", "Supply Chain Management"],
+    image: businessSolution,
   },
 ];
+
 
 const brands = [
   {
@@ -41,14 +96,14 @@ const brands = [
     description: "Custom-Designed Payment Gateway",
     details:
       "Your go-to custom payment gateway for seamless online transactions. Authorized Alipay agent with the approval of the Central Bank of Sri Lanka.",
-    logo: "https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2Fsripa_1x.png?alt=media&token=482c8785-44c9-4f0d-abfe-36655c8baf4d",
+    logo: sripay,
   },
   {
     title: "MISTORE",
     description: "Official Wholesaler and Retailer of Sri Lanka",
     details:
       "Your official Xiaomi products destination, serving as the authorized wholesaler and retailer in Sri Lanka.",
-    logo: "",
+    logo: xiomi,
   },
   {
     title: "GoGreen",
@@ -62,40 +117,40 @@ const brands = [
     description: "Premium Gem and Jewellery",
     details:
       "Offering the finest high-end gem jewelry and ethical gem and jewelry range.",
-    logo: "",
+    logo: kdona,
   },
   {
     title: "ALIPAY",
     description: "Official Partner for Sri Lanka",
     details:
       "The official partner for Sri Lanka, simplifying payments and enhancing financial convenience.",
-    logo: "",
+    logo: alipay,
   },
   {
     title: "BEEZ24",
     description: "Service Platform catered to Entrepreneurs",
     details:
       "Your service platform in the heart of China Mainland, exclusively for entrepreneurs. Unlock new opportunities and support for your business ventures.",
-    logo: "",
+    logo: beeze,
   },
   {
     title: "FALCORRA",
     description: "Authorized Wholesaler and Retailer",
     details: "Authorized wholesaler and retailer of premium bicycles.",
-    logo: "",
+    logo: falcora,
   },
   {
     title: "VEIN GRAPHITE",
     description: "The World's Purest Vein Graphite",
     details:
       "Home to the world's purest vein graphite, offering unmatched quality and performance in the industry.",
-    logo: "",
+    logo: V,
   },
   {
     title: "LOOLECONDERE TEA",
     description: "Premium Ceylonese Tea",
     details: "Savor the premium taste of Ceylonese tea excellence.",
-    logo: "",
+    logo: tea,
   },
   {
     title: "WECHATPAY",
@@ -109,9 +164,10 @@ const brands = [
     description: "Commercial and Lifestyle Center",
     details:
       "Your ultimate destination for a blend of commercial and lifestyle delights.",
-    logo: "",
+    logo: citymall,
   },
 ];
+
 
 const Services = () => {
   return (
@@ -145,87 +201,49 @@ const Services = () => {
         </div>
 
         {/* Services Section */}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12">
-          <div>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2FDigital%20Transformation.jpg?alt=media&token=adaf11fc-7bca-41a7-8291-bcc4f0430502"
-              alt=""
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="text-5xl font-bold text-boswin-navy mb-3">
-              {services[1].title}
-            </h3>
-            <p className="text-boswin-gray mb-4 text-3xl">
-              {services[1].description}
-            </p>
-            <ul className="space-y-2 mb-6">
-              {services[1].features.map((feature, fIndex) => (
-                <li key={fIndex} className="flex items-start">
-                  <CircleCheck className="w-5 h-5 text-red-500 mr-2 flex-shrink-0" />
-                  <span className="text-2xl text-boswin-gray">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 gap-6 mt-12">
+        <div className="grid grid-cols-1 gap-16 mt-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl relative"
+              className={`flex flex-col lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+                } items-center bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl relative`}
             >
-              {/* Decorative red pattern on card */}
-              <div
-                className="absolute right-0 top-0 w-16 h-16 opacity-10"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ef4444' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                }}
-              ></div>
+              {/* Image Section */}
+              <div className="w-full lg:w-1/2 h-64 lg:h-auto">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-              <div className="h-2 bg-gradient-to-r from-boswin-blue to-red-500"></div>
-              <div className="p-6">
+              {/* Content Section */}
+              <div className="w-full lg:w-1/2 p-6">
                 <h3 className="text-3xl font-bold text-boswin-navy mb-3">
                   {service.title}
                 </h3>
-                <p className="text-boswin-gray mb-4 text-2xl">
-                  {service.description}
-                </p>
+                <p className="text-boswin-gray mb-4 text-2xl">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start">
                       <CircleCheck className="w-5 h-5 text-red-500 mr-2 flex-shrink-0" />
-                      <span className="text-2xl text-boswin-gray">
-                        {feature}
-                      </span>
+                      <span className="text-2xl text-boswin-gray">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-
-              {/* Red accent stripe */}
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-400 via-red-500 to-transparent"></div>
             </div>
           ))}
         </div>
 
+
         {/* Brands Section - Auto Slider */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="max-w-5xl mx-auto text-center mb-12">
             <div className="text-left">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white relative">
-                <span
-                  className="absolute inset-0 text-white opacity-50 text-8xl"
-                  style={{
-                    WebkitTextStroke: "5px #000", // black stroke
-                    textShadow:
-                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000", // black shadow
-                  }}
-                >
-                  Brands
-                </span>
-                <span className="relative text-8xl">Brands</span>
+
+                <span className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-8 text-center bg-gradient-to-r from-boswin-navy to-red-500 text-transparent bg-clip-text">Brands</span>
               </h2>
             </div>
             <p className="text-boswin-gray text-lg">
@@ -235,19 +253,24 @@ const Services = () => {
           </div>
 
           <AutoSlider brands={brands} />
-        </div>
+        </div> */}
 
         <div className="mt-16 text-center relative">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy to-red-500">
+              Our Brands
+            </h2>
           {/* Decorative red accent for the bottom section */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-300 to-transparent"></div>
-          <p className="text-boswin-gray mb-6 max-w-2xl mx-auto relative z-10">
+          {/* <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-300 to-transparent"></div> */}
+          {/* <p className="text-boswin-gray mb-6 max-w-2xl mx-auto relative z-10">
             Looking for a customized solution for your specific business needs?
             Our team of experts is ready to help you develop the perfect
             solution.
-          </p>
+          </p> */}
         </div>
       </div>
+      <BrandSection/>
     </section>
+  
   );
 };
 
@@ -354,11 +377,10 @@ const AutoSlider = ({ brands }) => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? "w-8 bg-red-500"
-                    : "w-1.5 bg-gray-300 hover:bg-red-300"
-                }`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${index === currentSlide
+                  ? "w-8 bg-red-500"
+                  : "w-1.5 bg-gray-300 hover:bg-red-300"
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               ></button>
             ))}
@@ -397,13 +419,12 @@ const AutoSlider = ({ brands }) => {
           {visibleIndices.map((index, position) => (
             <div
               key={index}
-              className={`card-container transition-all duration-700 ease-out ${
-                position === 0
-                  ? "opacity-100 flex-1"
-                  : position === 1
+              className={`card-container transition-all duration-700 ease-out ${position === 0
+                ? "opacity-100 flex-1"
+                : position === 1
                   ? "opacity-100 flex-1"
                   : "opacity-100 flex-1 hidden md:block"
-              }`}
+                }`}
               style={{
                 transform: isTransitioning
                   ? "translateY(8px)"
@@ -411,17 +432,17 @@ const AutoSlider = ({ brands }) => {
               }}
             >
               <div
-                className={`h-full flex flex-col bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 ${
-                  position === 0 ? "transform rotate-0" : ""
-                }`}
+                className={`h-full flex flex-col bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 ${position === 0 ? "transform rotate-0" : ""
+                  }`}
               >
                 {/* Brand Card Header with Gradient */}
                 <div className="relative h-24 bg-gradient-to-r from-red-500 to-boswin-blue flex items-center justify-center px-6">
                   <img
-                    src="https://firebasestorage.googleapis.com/v0/b/boswin-group.firebasestorage.app/o/info%20web%20image%2Fsripa_1x.png?alt=media&token=482c8785-44c9-4f0d-abfe-36655c8baf4d"
+                    src={brands[index].logo}
                     alt=""
+                    className="w-30 h-24 object-contain"
                   />
-                  {/* Decorative Pattern */}
+
                   <div
                     className="absolute inset-0 opacity-10"
                     style={{
@@ -464,11 +485,10 @@ const AutoSlider = ({ brands }) => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? "w-8 bg-red-500"
-                  : "w-1.5 bg-gray-300 hover:bg-red-300"
-              }`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${index === currentSlide
+                ? "w-8 bg-red-500"
+                : "w-1.5 bg-gray-300 hover:bg-red-300"
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             ></button>
           ))}
@@ -484,6 +504,8 @@ const AutoSlider = ({ brands }) => {
           }}
         ></div>
       </div>
+
+
 
       {/* Slide counter */}
       <div className="mt-4 text-right text-sm text-boswin-gray">

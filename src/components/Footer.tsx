@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
@@ -42,7 +42,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-red-400 transition-colors">Careers</a></li>
             </ul>
           </div>
-          
+
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
@@ -61,19 +61,19 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Newsletter */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Stay Updated</h3>
             <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates.</p>
             <form className="space-y-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
+              <input
+                type="email"
+                placeholder="Your email address"
                 className="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-red-400"
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors"
               >
                 Subscribe
@@ -81,7 +81,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} Boswin Group. All rights reserved.</p>
         </div>

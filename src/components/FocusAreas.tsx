@@ -67,7 +67,7 @@ const focusAreas = [
 
 const FocusAreas = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  
+
   return (
     <section id="focus-areas" className="relative py-20 overflow-hidden">
       {/* Modern background pattern with red emphasis */}
@@ -77,7 +77,7 @@ const FocusAreas = () => {
         <div className="absolute top-40 left-0 w-40 h-40 bg-red-200 rounded-full opacity-30 -ml-10"></div>
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-red-100 rounded-full"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-red-200 rounded-full opacity-20"></div>
-        
+
         {/* Darker red diagonal stripes */}
         <div className="absolute inset-0 opacity-5"
           style={{
@@ -85,15 +85,15 @@ const FocusAreas = () => {
             backgroundSize: "40px 40px"
           }}>
         </div>
-        
+
         {/* Grid pattern overlay with darker red */}
-        <div className="absolute inset-0" 
+        <div className="absolute inset-0"
           style={{
             backgroundImage: "radial-gradient(circle at 1px 1px, rgba(185, 28, 28, 0.15) 1px, transparent 0)",
             backgroundSize: "40px 40px"
           }}>
         </div>
-        
+
         {/* Accent lines with darker red */}
         <div className="absolute top-[37%] right-0 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent opacity-30"></div>
         <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-red-500 via-transparent to-red-500 opacity-20"></div>
@@ -125,29 +125,29 @@ const FocusAreas = () => {
             >
               {/* Background accent for cards */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-red-50 to-transparent rounded-bl-full"></div>
-              
+
               {/* Darker red corner accent */}
               <div className="absolute top-0 left-0 w-3 h-3">
                 <div className="absolute top-0 left-0 w-0 h-0 border-t-6 border-l-6 border-red-500"></div>
               </div>
-              
+
               {/* Animated highlight on hover with darker red */}
               {hoveredIndex === index && (
                 <div className="absolute inset-0 bg-gradient-to-r from-boswin-blue to-red-600 opacity-10"></div>
               )}
-              
+
               <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
                 {area.icon}
               </div>
               <h3 className="relative z-10 text-xl font-semibold text-boswin-navy">
                 {area.title}
               </h3>
-              
+
               {/* Accent corner with darker red */}
               <div className="absolute bottom-0 right-0 w-8 h-8">
                 <div className="absolute bottom-0 right-0 w-0 h-0 border-b-8 border-r-8 border-red-600"></div>
               </div>
-              
+
               {/* Subtle darker red underline on hover */}
               <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 origin-left transition-transform duration-300 ${hoveredIndex === index ? 'scale-x-100' : ''}`}></div>
             </div>
