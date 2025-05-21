@@ -15,6 +15,7 @@ import fintech from "../images/fintech.png"
 import degitalTechnology from "../images/degitalInformation.png"
 import technology from "../images/technologyDevelopment.png"
 import businessSolution from "../images/businessSolution.png"
+import BrandSection from "./brand";
 
 
 // const services = [
@@ -236,16 +237,8 @@ const Services = () => {
         </div>
 
 
-
-
-
-
-
-
-
-
         {/* Brands Section - Auto Slider */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="max-w-5xl mx-auto text-center mb-12">
             <div className="text-left">
               <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white relative">
@@ -260,19 +253,24 @@ const Services = () => {
           </div>
 
           <AutoSlider brands={brands} />
-        </div>
+        </div> */}
 
         <div className="mt-16 text-center relative">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-boswin-navy to-red-500">
+              Our Brands
+            </h2>
           {/* Decorative red accent for the bottom section */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-300 to-transparent"></div>
-          <p className="text-boswin-gray mb-6 max-w-2xl mx-auto relative z-10">
+          {/* <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-300 to-transparent"></div> */}
+          {/* <p className="text-boswin-gray mb-6 max-w-2xl mx-auto relative z-10">
             Looking for a customized solution for your specific business needs?
             Our team of experts is ready to help you develop the perfect
             solution.
-          </p>
+          </p> */}
         </div>
       </div>
+      <BrandSection/>
     </section>
+  
   );
 };
 
@@ -506,6 +504,8 @@ const AutoSlider = ({ brands }) => {
           }}
         ></div>
       </div>
+
+
 
       {/* Slide counter */}
       <div className="mt-4 text-right text-sm text-boswin-gray">
